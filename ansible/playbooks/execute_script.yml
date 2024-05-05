@@ -1,0 +1,11 @@
+# Necesitamos ejecutar los scripts
+- name: Ejecutar mensaje Python
+  #Se ejecuta en el host local
+  hosts: localhost
+  #Solicitar permisos de superusario
+  become: yes
+  tasks:
+    - name: Ejecutar mensaje
+      command: /bin/bash -c "source myenv/bin/activate && python /ansible/mensaje.py"
+
+
