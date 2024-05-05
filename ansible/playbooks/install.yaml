@@ -1,0 +1,17 @@
+# Necesitamos instalar nano y python 3.7
+- name: Instalar nano y python 3.7
+  #Se ejecuta en el host local
+  hosts: localhost
+  #Solicitar permisos de superusario
+  become: yes
+  tasks:
+    - name: Instalar nano
+      apt:
+        name: nano
+        state: present
+
+    - name: Instalar Python 3.7
+      apt:
+        name: python3
+        state: present
+

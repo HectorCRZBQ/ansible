@@ -1,0 +1,10 @@
+# Necesitamos crear un entorno virtual
+- name: Crear entorno virtual en Python
+    #Se ejecuta en el host local
+  hosts: localhost
+  #Solicitar permisos de superusario
+  become: yes
+  tasks:
+    - name: Crear entorno virtual
+      command: python3.8 -m venv myenv
+
